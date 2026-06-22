@@ -25,7 +25,7 @@ jobs:
     outputs:
       version: ${{ steps.version.outputs.version }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - name: Resolve version from release tag, workflow input, or Cargo.toml
         id: version
         run: |
@@ -59,7 +59,7 @@ jobs:
           - darwin-arm64
           - win32-x64
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       
       - name: Setup Node.js
         uses: actions/setup-node@v6
@@ -152,7 +152,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [get-version]
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       
       - name: Setup Node.js
         uses: actions/setup-node@v6
